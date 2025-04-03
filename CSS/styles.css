@@ -1,0 +1,528 @@
+/*
+ * Estilos generales de la página
+ * -----------------------------
+ */
+ body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e8f0fa;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+ * Estilos del encabezado de la página
+ * ----------------------------------
+ */
+header {
+    background-color: #2196f3;
+    color: white;
+    padding: 1.2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 5vh;
+}
+
+/*
+ * Estilos de la navegación principal
+ * ----------------------------------
+ */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+    height: 100%;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+    display: block;
+    height: 100%;
+    padding-top: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #bbdefb;
+    transform: scale(1.05);
+}
+
+/*
+ * Estilos del contenido principal de la página
+ * ------------------------------------------
+ */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+    width: 100%;
+    flex: 1;
+}
+
+/*
+ * Estilos de la sección de inicio de sesión y registro
+ * --------------------------------------------------
+ */
+section#login-register,
+section#registro {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 2.5rem;
+    width: 95%;
+    max-width: 450px;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.contenido-login,
+.contenido-registro {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+h2 {
+    color: #1976d2;
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+    width: 100%;
+}
+
+h5 {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+form#formulario-login,
+form#formulario-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 200px;
+}
+
+/* Estilos de las etiquetas del formulario */
+label {
+    display: block;
+    margin-top: 1.25rem;
+    text-align: left;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+label:hover {
+    color: #1a5285;
+}
+
+/* Estilos de los campos de entrada del formulario */
+input {
+    padding: 0.8rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    width: calc(100% - 2.2rem);
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    min-height: 2.5rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2196f3;
+    box-shadow: 0 0 7px rgba(33, 150, 243, 0.2);
+}
+
+/* Estilos del botón de inicio de sesión y registro */
+button {
+    background-color: #2196f3;
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease,
+                box-shadow 0.3s ease;
+    margin-top: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+    min-height: 2.5rem;
+}
+
+button:hover {
+    background-color: #1976d2;
+    transform: scale(1.02);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+    border-top: 1px solid #455a64;
+    min-height: 3vh;
+    width: 100%;
+}
+
+/* Estilos de los enlaces */
+a {
+    color: #2196f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1565c0;
+}
+
+/*
+ * Estilos del elemento html
+ * -----------------------
+ */
+html {
+    height: 100%;
+}
+
+/*
+ * Estilos del cuerpo de la página
+ * -----------------------------
+ */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*
+ * Estilos del contenido principal
+ * -----------------------------
+ */
+main {
+    flex: 1;
+}
+
+/*
+ * Media Queries
+ * -------------
+ * Adaptaciones para diferentes tamaños de pantalla.
+ */
+
+/* Muy pequeños (dispositivos muy pequeños, como relojes inteligentes) */
+@media (max-width: 320px) {
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.25rem 0;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 0;
+        font-size: 0.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section#login-register,
+    section#registro {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        font-size: 0.75rem;
+    }
+
+    input {
+        padding: 0.5rem;
+        width: calc(100% - 1rem);
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+        font-size: 0.7rem;
+    }
+}
+
+
+/* Pequeños (teléfonos móviles) */
+@media (min-width: 321px) and (max-width: 480px) {
+    header {
+        padding: 0.75rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.25rem 0;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section#login-register,
+    section#registro {
+        padding: 1.5rem;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 0.85rem;
+    }
+
+    input {
+        padding: 0.6rem;
+        width: calc(100% - 1.2rem);
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 0.75rem 0;
+        font-size: 0.8rem;
+    }
+}
+
+/* Medianos (tabletas pequeñas) */
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        padding: 0.75rem 0;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    section#login-register,
+    section#registro {
+        padding: 2rem;
+        width: 98%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+    input {
+        padding: 0.7rem;
+        width: calc(100% - 1.4rem);
+    }
+
+    button {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* Grandes (tabletas grandes y portátiles pequeñas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 1.2rem 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        padding: 1rem 0;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    section#login-register,
+    section#registro {
+        padding: 2.5rem;
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 0.95rem;
+    }
+
+    input {
+        padding: 0.8rem;
+        width: calc(100% - 1.8rem);
+    }
+
+    button {
+        padding: 0.8rem 2.2rem;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 1.2rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Muy grandes (ordenadores de escritorio y pantallas grandes) */
+@media (min-width: 1025px) {
+    header {
+        padding: 1.2rem 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 1.5rem;
+    }
+
+    nav ul li a {
+        padding: 1.2rem 0;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    section#login-register,
+    section#registro {
+        padding: 2.5rem;
+        width: 95%;
+        max-width: 450px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 0.95rem;
+    }
+
+    input {
+        padding: 0.8rem;
+        width: calc(100% - 2.2rem);
+    }
+
+    button {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 1.2rem 0;
+        font-size: 0.95rem;
+    }
+}

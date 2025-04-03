@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Pistas - Fútbol</title>
+    
+    <!-- ✅ Enlace a Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- ✅ Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="../CSS/stylesformularios.css">
+    
+    <link rel="icon" type="image/jpg" href="../IMGS/icono.jpg">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../IMGS/BanderaTomelloso.png" alt="Tomelloso">
+            <img src="../IMGS/EspañaBandera.png" alt="España">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="./formulario1.html"><i class="fas fa-futbol"></i> Fútbol</a></li>
+                <li><a href="./formulario2.html"><i class="fas fa-table-tennis"></i> Tenis</a></li>
+                <li><a href="./formulario3.html"><i class="fas fa-basketball-ball"></i> Baloncesto</a></li>
+                <li><a href="./contactos.html"><i class="fas fa-phone"></i> Contactos</a></li>
+            </ul>
+        </nav>
+        <h1><strong><u>Formulario reserva pistas fútbol</u></strong></h1>
+    </header>
+    
+    <main>
+        <section class="form-container">
+            <form action="./Formulario.html" method="GET" autocomplete="on">
+                <fieldset>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                    
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                    
+                    <label for="calendario">Fecha de Reserva:</label>
+                    <input type="date" id="calendario" name="calendario" required>
+                    
+                    <label for="hora-inicio">Hora de Inicio:</label>
+                    <input type="time" id="hora-inicio" name="hora-inicio" required>
+                    
+                    <label for="hora-fin">Hora de Finalización:</label>
+                    <input type="time" id="hora-fin" name="hora-fin" required>
+                    
+                    <label for="tipocancha">Tipo de Cancha:</label>
+                    <select id="tipocancha" name="tipocancha" required>
+                        <option value="CP">Cancha Profesional</option>
+                        <option value="CFS">Cancha Futbol Sala</option>
+                        <option value="CF7">Cancha Futbol 7</option>
+                        <option value="CF5">Cancha Futbol 5</option>
+                        <option value="CFP">Cancha Futbol de Playa</option>
+                    </select>
+                    
+                    <label for="tipopasto">Tipo de Pasto:</label>
+                    <select id="tipopasto" name="tipopasto" required>
+                        <option value="PN">Pasto Natural</option>
+                        <option value="PA">Pasto Artificial</option>
+                        <option value="PH">Pasto Híbrido</option>
+                    </select>
+                </fieldset>
+                
+                <div class="form-buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
+            <br>
+            <div id="datos">
+                <p>
+                    <strong>Responsable de tratamiento:</strong> TOMELLOSO CF SAD <br>
+                    <strong>Finalidad en el tratamiento de datos:</strong> Solicitudes para reservar pistas en las instalaciones del Tomelloso CF. <br>
+                    <strong>Legitimación:</strong> consentimiento prestado y en cumplimiento del contrato. <br>
+                    <strong>Cesiones:</strong> los datos cedidos no serán en ningún caso cedidos a terceros salvo por obligaciones legales expresas. <br>
+                    <strong>Destinatarios:</strong> No se cederán a terceros salvo obligación legal. <br>
+                    <strong>Derecho de los interesados:</strong> Puede ejercer sus derechos sobre protección de datos por correo en rgpd@tomellosocf.es. Puede consultar más información en <a href="https://www.aepd.es/">Agencia Española de Protección de Datos</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <h3><strong>Política de privacidad:</strong></h3>
+        <a href="#">He leído y acepto la</a> política de privacidad
+        <br>
+        <h6>Pistas Tomelloso &copy;2025 Todos los derechos reservados.</h6>
+    </footer>
+</body>
+</html>

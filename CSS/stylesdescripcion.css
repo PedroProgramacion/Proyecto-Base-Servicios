@@ -1,0 +1,409 @@
+/* ========================================= */
+/* ESTILOS PARA TU HTML ADAPTABLE (RESPONSIVE) */
+/* CON RANGOS DE PANTALLA DEFINIDOS          */
+/* ========================================= */
+
+/* --- 1. Reset de Estilos --- */
+/*
+  * Resetea los márgenes, el relleno y el modelo de caja para asegurar
+  * una consistencia entre diferentes navegadores.  Esto significa que eliminamos
+  * cualquier estilo predeterminado que el navegador pueda aplicar, para tener
+  * un control total sobre el diseño.
+  */
+  * {
+    margin: 0; /* Elimina el margen (espacio alrededor del elemento) */
+    padding: 0; /* Elimina el relleno (espacio dentro del elemento) */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto del elemento */
+  }
+  
+  /* --- 2. Estilos del Body --- */
+  /*
+    * Define la fuente, el color de fondo y la disposición del contenido
+    * principal en la página.  El body es el contenedor principal de todo
+    * el contenido visible de la página.
+    */
+  body {
+    font-family: 'Inter', sans-serif; /* Establece la fuente del texto */
+    background-color: #f0f4f8; /* Establece el color de fondo de la página */
+    display: flex; /* Usa flexbox para organizar los elementos dentro del body */
+    flex-direction: column; /* Organiza los elementos en columna (uno encima del otro) */
+    min-height: 100vh; /* Establece la altura mínima del body al 100% de la altura de la ventana */
+    line-height: 1.6; /* Establece el espaciado entre líneas del texto */
+    color: #333; /* Establece el color del texto */
+  }
+  
+  /* --- 3. Estilos del Encabezado (Header) --- */
+  /*
+    * Estilos para el encabezado de la página.  El encabezado suele contener el título
+    * de la página y otra información importante.
+    */
+  header {
+    background-color: #3498db; /* Color de fondo del encabezado (azul) */
+    color: white; /* Color del texto en el encabezado (blanco) */
+    padding: 1.5rem 2rem; /* Relleno dentro del encabezado (arriba/abajo, izquierda/derecha) */
+    text-align: center; /* Alinea el texto del encabezado al centro */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave debajo del encabezado */
+  }
+  
+  header h1 {
+    font-size: 2.2rem; /* Tamaño de la fuente del título principal */
+    margin-bottom: 0.8rem; /* Margen debajo del título */
+  }
+  
+  header p {
+    font-size: 1.1rem; /* Tamaño de la fuente del párrafo */
+    margin: 0.5rem auto; /* Margen arriba y abajo, centrado horizontalmente */
+    max-width: 90%; /* Ancho máximo del párrafo (relativo al contenedor) */
+    opacity: 0.95; /* Opacidad del texto (ligeramente transparente) */
+  }
+  
+  /* --- 4. Estilos del Contenedor Principal --- */
+  /*
+    * Contiene la navegación, el contenido principal y la barra lateral.
+    * Este contenedor organiza las secciones principales de la página.
+    */
+  .container {
+    display: flex; /* Usa flexbox para organizar los elementos dentro del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente fila en pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 2rem auto; /* Margen arriba y abajo, centrado horizontalmente */
+    padding: 0 1rem; /* Relleno horizontal dentro del contenedor */
+    gap: 1.5rem; /* Espacio entre los elementos dentro del contenedor */
+    width: 100%; /* El contenedor ocupa el 100% del ancho disponible */
+  }
+  
+  /* --- 5. Estilos de la Navegación (Nav) --- */
+  /*
+    * Estilos para el menú de navegación principal.
+    */
+  nav {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    max-width: 300px; /* Ancho máximo en pantallas más grandes */
+    background: white; /* Color de fondo del menú de navegación */
+    padding: 1.5rem; /* Relleno dentro del menú de navegación */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra suave */
+    height: fit-content; /* Altura que se ajusta al contenido */
+    position: sticky; /* Posición fija dentro de su contenedor */
+    top: 2rem; /* Espacio desde la parte superior de la ventana */
+  }
+  
+  nav h2 {
+    color: #3498db; /* Color del título del menú de navegación (azul) */
+    font-size: 1.4rem; /* Tamaño de la fuente del título */
+    margin-bottom: 1.5rem; /* Margen debajo del título */
+    padding-bottom: 0.5rem; /* Relleno debajo del título */
+    border-bottom: 2px solid #f0f4f8; /* Borde inferior */
+  }
+  
+  nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+  }
+  
+  nav li {
+    margin-bottom: 1rem; /* Margen debajo de cada elemento de la lista */
+  }
+  
+  nav a {
+    color: #2c3e50; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-weight: 600; /* Texto en negrita */
+    font-size: 1rem; /* Tamaño de la fuente del enlace */
+    display: block; /* El enlace ocupa todo el ancho de su contenedor */
+    padding: 0.6rem 0.8rem; /* Relleno dentro del enlace */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: all 0.2s ease; /* Transición suave para los efectos hover */
+  }
+  
+  nav a:hover {
+    background-color: #3498db; /* Color de fondo al pasar el ratón (azul) */
+    color: white; /* Color del texto al pasar el ratón (blanco) */
+    transform: translateX(3px); /* Desplaza el enlace ligeramente a la derecha al pasar el ratón */
+  }
+  
+  /* --- 6. Estilos del Contenido Principal (Main) --- */
+  /*
+    * Contiene el contenido principal de la página (artículos, etc.).
+    */
+  main {
+    flex: 1; /* El contenido principal ocupa el espacio restante */
+    background: white; /* Color de fondo */
+    padding: 2rem; /* Relleno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra suave */
+    min-width: 0; /* Evita desbordamiento horizontal en pantallas pequeñas */
+  }
+  
+  /* --- 7. Estilos de los Artículos (Article) --- */
+  /*
+    * Estilos para los artículos dentro del contenido principal.
+    */
+  article {
+    margin-bottom: 3rem; /* Margen debajo de cada artículo */
+  }
+  
+  article h2 {
+    color: #2c3e50; /* Color del título del artículo */
+    font-size: 1.8rem; /* Tamaño de la fuente del título */
+    margin-bottom: 1.2rem; /* Margen debajo del título */
+    padding-top: 0.3rem; /* Relleno encima del título */
+    scroll-margin-top: 1rem; /* Margen para cuando se hace scroll al título */
+  }
+  
+  article p {
+    color: #555; /* Color del texto del párrafo */
+    font-size: 1.05rem; /* Tamaño de la fuente del párrafo */
+    line-height: 1.7; /* Espaciado entre líneas del párrafo */
+    margin-bottom: 1.2rem; /* Margen debajo del párrafo */
+  }
+  
+  /* --- 8. Estilos de la Barra Lateral (Aside) --- */
+  /*
+    * Estilos para la barra lateral.
+    */
+  aside {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    max-width: 300px; /* Ancho máximo en pantallas grandes */
+    background: white; /* Color de fondo */
+    padding: 1.5rem; /* Relleno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra suave */
+    height: fit-content; /* Altura que se ajusta al contenido */
+    position: sticky; /* Posición fija dentro de su contenedor */
+    top: 2rem; /* Espacio desde la parte superior de la ventana */
+  }
+  
+  aside h2 {
+    color: #3498db; /* Color del título de la barra lateral (azul) */
+    font-size: 1.4rem; /* Tamaño de la fuente del título */
+    margin-bottom: 1.5rem; /* Margen debajo del título */
+    padding-bottom: 0.5rem; /* Relleno debajo del título */
+    border-bottom: 2px solid #f0f4f8; /* Borde inferior */
+  }
+  
+  aside ul {
+    list-style: none; /* Elimina los puntos de la lista */
+  }
+  
+  aside li {
+    margin-bottom: 1rem; /* Margen debajo de cada elemento de la lista */
+  }
+  
+  aside a {
+    color: #2c3e50; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: 600; /* Texto en negrita */
+    font-size: 1rem; /* Tamaño de la fuente */
+    display: block; /* El enlace ocupa todo el ancho de su contenedor */
+    padding: 0.6rem 0.8rem; /* Relleno dentro del enlace */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: all 0.2s ease; /* Transición suave para los efectos hover */
+  }
+  
+  aside a:hover {
+    background-color: #3498db; /* Color de fondo al pasar el ratón (azul) */
+    color: white; /* Color del texto al pasar el ratón (blanco) */
+    transform: translateX(3px); /* Desplaza el enlace ligeramente a la derecha al pasar el ratón */
+  }
+  
+  /* --- 9. Estilos del Pie de Página (Footer) --- */
+  /*
+    * Estilos para el pie de página de la página.
+    */
+  footer {
+    background: #2c3e50; /* Color de fondo del pie de página */
+    color: white; /* Color del texto en el pie de página */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 1.5rem; /* Relleno dentro del pie de página */
+    margin-top: 2rem; /* Margen encima del pie de página */
+    font-size: 0.95rem; /* Tamaño de la fuente del texto */
+  }
+  
+  /* --- 10. Estilos Responsive --- */
+  /*
+    * Estilos para adaptar la página a diferentes tamaños de pantalla.
+    */
+  
+  /* Pantallas muy pequeñas (menos de 576px) */
+  @media (max-width: 575.98px) {
+    /*
+      * Se aplica a dispositivos con un ancho de pantalla de hasta 575.98px.
+      * Esto generalmente incluye teléfonos móviles en modo vertical.
+      */
+    header {
+      padding: 1rem; /* Reduce el relleno del encabezado para pantallas más pequeñas */
+    }
+  
+    header h1 {
+      font-size: 1.6rem; /* Reduce el tamaño del título para pantallas más pequeñas */
+    }
+  
+    header p {
+      font-size: 0.9rem; /* Reduce el tamaño del párrafo para pantallas más pequeñas */
+    }
+  
+    .container {
+      flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+      padding: 0 1rem; /* Ajusta el relleno del contenedor */
+      margin: 1rem auto; /* Ajusta los márgenes del contenedor */
+    }
+  
+    nav, aside, main {
+      width: 100%; /* Hace que la navegación, la barra lateral y el contenido principal ocupen todo el ancho */
+      position: static; /* Cambia la posición a estática para que no se superpongan los elementos */
+      margin-bottom: 1.5rem; /* Añade margen inferior para separar los elementos */
+    }
+  
+    nav h2, aside h2 {
+      font-size: 1.2rem; /* Reduce el tamaño de los encabezados en la navegación y la barra lateral */
+    }
+  
+    nav a, aside a {
+      font-size: 0.9rem; /* Reduce el tamaño de los enlaces en la navegación y la barra lateral */
+      padding: 0.5rem 0.7rem; /* Reduce el relleno de los enlaces */
+    }
+  
+    main {
+      padding: 1rem; /* Reduce el relleno del contenido principal */
+    }
+  
+    article h2 {
+      font-size: 1.4rem; /* Reduce el tamaño de los encabezados de los artículos */
+    }
+  
+    article p {
+      font-size: 0.95rem; /* Reduce el tamaño de los párrafos de los artículos */
+    }
+  }
+  
+  /* Pantallas pequeñas (576px a 767.98px) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    /*
+      * Se aplica a dispositivos con un ancho de pantalla entre 576px y 767.98px.
+      * Esto incluye algunos teléfonos en modo horizontal y tablets pequeñas.
+      */
+    header {
+      padding: 1rem;
+    }
+  
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  
+    .container {
+      flex-direction: column;
+      padding: 0 1rem;
+      margin: 1rem auto;
+    }
+  
+    nav, aside, main {
+      width: 100%;
+      position: static;
+      margin-bottom: 1.5rem;
+    }
+  
+    nav h2, aside h2 {
+      font-size: 1.3rem;
+    }
+  
+    nav a, aside a {
+      font-size: 1rem;
+      padding: 0.6rem 0.8rem;
+    }
+  
+    main {
+      padding: 1.5rem;
+    }
+  
+    article h2 {
+      font-size: 1.5rem;
+    }
+  
+    article p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Pantallas medianas (768px a 991.98px) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    /*
+      * Se aplica a dispositivos con un ancho de pantalla entre 768px y 991.98px.
+      * Esto incluye tablets y algunos portátiles pequeños.
+      */
+    .container {
+      flex-direction: column; /* Mantiene los elementos apilados en pantallas medianas */
+      padding: 0 1rem;
+      margin: 1rem auto;
+    }
+  
+    nav, aside, main {
+      width: 100%; /* Los elementos ocupan todo el ancho */
+      position: static; /* Posición estática */
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  /* Pantallas grandes (992px a 1199.98px) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /*
+      * Se aplica a dispositivos con un ancho de pantalla entre 992px y 1199.98px.
+      * Esto incluye portátiles y ordenadores de escritorio de tamaño medio.
+      */
+    .container {
+      flex-direction: row; /* Coloca los elementos en fila horizontal en pantallas grandes */
+      padding: 0 1rem;
+      margin: 2rem auto;
+    }
+  
+    nav, aside {
+      width: 30%; /* La navegación y la barra lateral ocupan el 30% del ancho */
+    }
+  
+    main {
+      flex: 1; /* El contenido principal ocupa el espacio restante */
+    }
+  }
+  
+  /* Pantallas muy grandes (1200px y más) */
+  @media (min-width: 1200px) {
+    /*
+      * Se aplica a dispositivos con un ancho de pantalla de 1200px o más.
+      * Esto incluye ordenadores de escritorio grandes y televisores.
+      */
+    .container {
+      flex-direction: row; /* Mantiene los elementos en fila horizontal en pantallas muy grandes */
+      padding: 0 1rem;
+      margin: 2rem auto;
+    }
+  
+    nav, aside {
+      width: 25%; /* La navegación y la barra lateral ocupan el 25% del ancho */
+    }
+  
+    main {
+      flex: 1; /* El contenido principal ocupa el espacio restante */
+    }
+  }
+  
+  /* --- 11. Estilos para Enlaces de Anclaje --- */
+  /*
+    * Estilos para resaltar los enlaces de anclaje (cuando se hace clic en un enlace que te lleva a una parte específica de la página).
+    */
+  :target {
+    animation: highlight 1.5s ease; /* Aplica una animación de resaltado de 1.5 segundos */
+  }
+  
+  @keyframes highlight {
+    /*
+      * Define la animación 'highlight'.
+      * 0% indica el inicio de la animación.
+      * 100% indica el final de la animación.
+      */
+    0% { background-color: rgba(52, 152, 219, 0.3); } /* Comienza con un color de fondo azul claro */
+    100% { background-color: transparent; } /* Termina con color de fondo transparente (desaparece el resaltado) */
+  }
+  

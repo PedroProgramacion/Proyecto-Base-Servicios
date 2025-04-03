@@ -1,0 +1,268 @@
+/* ============================================= */
+/* ESTILOS GENERALES DE LA PÁGINA */
+/* ============================================= */
+
+/* Estilos base para el cuerpo de la página */
+body {
+    font-family: 'Inter', sans-serif;       /* Define la fuente principal para toda la página */
+    background-color: #e8f0fa;              /* Color de fondo azul claro para toda la página */
+    margin: 0;                              /* Elimina márgenes predeterminados del navegador */
+    padding: 0;                             /* Elimina rellenos predeterminados */
+    min-width: 320px;                       /* Ancho mínimo para compatibilidad con móviles */
+    min-height: 100vh;                      /* Altura mínima de toda la ventana visible */
+    display: flex;                          /* Activa el modelo de caja flexible */
+    flex-direction: column;                 /* Organiza los elementos en columna vertical */
+}
+
+/* ============================================= */
+/* ESTILOS DEL ENCABEZADO */
+/* ============================================= */
+
+header {
+    background-color: #2196f3;              /* Color azul para el encabezado */
+    color: white;                          /* Texto en color blanco */
+    padding: 1.2rem 0;                     /* Espaciado interno vertical */
+    text-align: center;                     /* Centrado del texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+    width: 100%;                           /* Ancho completo */
+    min-height: 5vh;                       /* Altura mínima del 5% del viewport */
+    display: flex;                         /* Flexbox para alineación interna */
+    flex-direction: column;                /* Organización en columna */
+    align-items: center;                   /* Centrado horizontal de elementos */
+}
+
+/* ============================================= */
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN */
+/* ============================================= */
+
+/* Lista de navegación principal */
+nav ul {
+    list-style: none;                      /* Elimina viñetas de lista */
+    display: flex;                         /* Disposición en fila */
+    justify-content: center;               /* Centrado horizontal */
+    padding: 0;                            /* Sin relleno interno */
+    margin: 0;                             /* Sin márgenes externos */
+    width: 100%;                           /* Ancho completo */
+    height: 100%;                          /* Altura completa */
+    align-items: center;                   /* Centrado vertical */
+    flex-wrap: wrap;                       /* Permite ajuste a múltiples líneas */
+}
+
+/* Elementos individuales de la navegación */
+nav ul li {
+    margin: 0 1.5rem;                      /* Espaciado horizontal entre elementos */
+    height: 100%;                          /* Altura completa */
+    display: flex;                         /* Flexbox para alineación */
+    align-items: center;                   /* Centrado vertical */
+}
+
+/* Enlaces de navegación */
+nav ul li a {
+    color: white;                          /* Color de texto blanco */
+    text-decoration: none;                 /* Sin subrayado */
+    font-weight: 600;                      /* Grosor de fuente seminegrita */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    display: block;                        /* Comportamiento de bloque */
+    height: 100%;                          /* Altura completa */
+    padding-top: 1.2rem;                   /* Relleno superior */
+}
+
+/* Efecto hover para enlaces */
+nav ul li a:hover {
+    color: #bbdefb;                        /* Cambio de color al azul claro */
+    transform: scale(1.05);                /* Ligero aumento de tamaño */
+}
+
+/* ============================================= */
+/* ESTILOS DEL BUSCADOR */
+/* ============================================= */
+
+#search-container {
+    display: flex;                         /* Disposición flexible */
+    align-items: center;                   /* Centrado vertical */
+    margin-left: 1rem;                     /* Margen izquierdo */
+    margin-top: 1rem;                      /* Margen superior */
+}
+
+#product-search {
+    padding: 0.5rem;                       /* Relleno interno */
+    border: 1px solid #ccc;                /* Borde gris claro */
+    border-radius: 5px 0 0 5px;            /* Bordes redondeados solo a la izquierda */
+    width: 150px;                          /* Ancho fijo */
+}
+
+#search-button {
+    padding: 0.5rem 1rem;                  /* Relleno interno */
+    background-color: #2196f3;              /* Fondo azul */
+    color: white;                          /* Texto blanco */
+    border: none;                          /* Sin bordes */
+    border-radius: 0 5px 5px 0;            /* Bordes redondeados solo a la derecha */
+    cursor: pointer;                       /* Cursor tipo puntero */
+    transition: background-color 0.3s ease; /* Transición suave de color */
+}
+
+#search-button:hover {
+    background-color: #1976d2;             /* Color azul más oscuro al pasar el ratón */
+}
+
+/* ============================================= */
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
+/* ============================================= */
+
+main {
+    display: flex;                         /* Flexbox para centrado */
+    justify-content: center;               /* Centrado horizontal */
+    align-items: center;                   /* Centrado vertical */
+    min-height: 80vh;                      /* Altura mínima del 80% del viewport */
+    padding: 2rem;                         /* Relleno interno */
+    width: 100%;                           /* Ancho completo */
+    flex: 1;                               /* Expansión para ocupar espacio disponible */
+}
+
+/* ============================================= */
+/* ESTILOS DE LA SECCIÓN DE SERVICIOS */
+/* ============================================= */
+
+#servicios {
+    display: flex;                         /* Flexbox para disposición */
+    flex-wrap: wrap;                       /* Permite múltiples líneas */
+    justify-content: center;               /* Centrado horizontal */
+    padding: 1rem;                         /* Relleno interno */
+    width: 100%;                           /* Ancho completo */
+    max-width: 100%;                       /* Ancho máximo */
+    margin: 0;                             /* Sin márgenes */
+}
+
+#servicios h2 {
+    width: 100%;                           /* Ancho completo */
+    text-align: center;                    /* Centrado de texto */
+    margin-bottom: 2rem;                   /* Margen inferior */
+    color: #1976d2;                        /* Color azul */
+    font-size: 2.5rem;                     /* Tamaño de fuente grande */
+}
+
+/* Tarjetas de servicios individuales */
+.servicio {
+    background-color: white;               /* Fondo blanco */
+    border-radius: 10px;                   /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 1rem;                          /* Margen externo */
+    padding: 1.5rem;                       /* Relleno interno */
+    width: 300px;                          /* Ancho fijo */
+    text-align: center;                    /* Texto centrado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    min-height: 400px;                     /* Altura mínima */
+    display: flex;                         /* Flexbox para disposición interna */
+    flex-direction: column;                /* Organización en columna */
+    justify-content: space-between;        /* Distribución del espacio */
+}
+
+/* Efecto hover para tarjetas de servicio */
+.servicio:hover {
+    transform: scale(1.05);                /* Ligero aumento de tamaño */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Títulos de servicios */
+.servicio h3 {
+    font-size: 1.5rem;                     /* Tamaño de fuente */
+    margin-bottom: 0.5rem;                 /* Margen inferior */
+    color: #2c3e50;                        /* Color de texto oscuro */
+}
+
+/* Descripciones de servicios */
+.servicio p {
+    font-size: 1rem;                       /* Tamaño de fuente */
+    color: #666;                           /* Color de texto gris */
+    margin-bottom: 1rem;                   /* Margen inferior */
+}
+
+/* Imágenes de servicios */
+.servicio img {
+    width: 100%;                           /* Ancho completo */
+    max-height: 200px;                     /* Altura máxima */
+    object-fit: contain;                   /* Ajuste de imagen */
+    border-radius: 8px;                    /* Esquinas redondeadas */
+    margin-bottom: 1rem;                   /* Margen inferior */
+}
+
+/* Botones de servicios */
+.btn-servicio {
+    background-color: #2196f3;              /* Fondo azul */
+    color: white;                          /* Texto blanco */
+    padding: 0.75rem 1.5rem;               /* Relleno interno */
+    border: none;                          /* Sin bordes */
+    border-radius: 5px;                    /* Esquinas redondeadas */
+    cursor: pointer;                       /* Cursor tipo puntero */
+    font-size: 1rem;                       /* Tamaño de fuente */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    align-self: center;                    /* Auto-centrado */
+    margin-top: 1rem;                      /* Margen superior */
+}
+
+/* Efecto hover para botones */
+.btn-servicio:hover {
+    background-color: #1976d2;             /* Color azul más oscuro */
+    transform: scale(1.05);                /* Ligero aumento de tamaño */
+}
+
+/* ============================================= */
+/* ESTILOS DEL PIE DE PÁGINA */
+/* ============================================= */
+
+footer {
+    background-color: #2c3e50;             /* Fondo azul oscuro */
+    color: white;                          /* Texto blanco */
+    text-align: center;                    /* Centrado de texto */
+    padding: 1.2rem 0;                     /* Relleno interno vertical */
+    margin-top: 3rem;                      /* Margen superior */
+    font-size: 0.95rem;                    /* Tamaño de fuente pequeño */
+    border-top: 1px solid #455a64;         /* Borde superior */
+    min-height: 3vh;                       /* Altura mínima */
+    width: 100%;                           /* Ancho completo */
+}
+
+/* ============================================= */
+/* ESTILOS GENERALES DE ENLACES */
+/* ============================================= */
+
+a {
+    color: #2196f3;                        /* Color azul para enlaces */
+    text-decoration: none;                 /* Sin subrayado */
+    transition: color 0.3s ease;           /* Transición suave de color */
+}
+
+a:hover {
+    color: #1565c0;                        /* Color azul más oscuro al pasar el ratón */
+}
+
+/* ============================================= */
+/* ESTILOS BASE DEL DOCUMENTO HTML */
+/* ============================================= */
+
+html {
+    height: 100%;                          /* Altura completa del viewport */
+}
+
+/* Refuerzo de estilos para el cuerpo */
+body {
+    display: flex;                         /* Flexbox para disposición */
+    flex-direction: column;                /* Organización en columna */
+    min-height: 100vh;                     /* Altura mínima de toda la ventana */
+}
+
+/* Refuerzo de estilos para el contenido principal */
+main {
+    flex: 1;                               /* Expansión para ocupar espacio disponible */
+}
+
+/* ============================================= */
+/* ESTILOS DEL CONTENEDOR PRINCIPAL */
+/* ============================================= */
+
+#container {
+    width: 100%;                           /* Ancho completo */
+    max-width: 100%;                       /* Ancho máximo */
+    margin: 0;                             /* Sin márgenes */
+    padding: 0;                            /* Sin relleno */
+}
